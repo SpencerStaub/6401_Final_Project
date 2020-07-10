@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Consumption</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">6103 Final Project</div>
+      <div class="list-group list-group-flush">
+        <a href="index.html" class="list-group-item list-group-item-action bg-light">Dashboard</a>
+        <a href="EProduction.html" class="list-group-item list-group-item-action bg-light">Production</a>
+        <a href="EConsumption.html" class="list-group-item list-group-item-action bg-light">Consumption</a>
+        <a href="ERenewables.html" class="list-group-item list-group-item-action bg-light">Renewables</a>
+        <a href="EPolution.html" class="list-group-item list-group-item-action bg-light">Polution</a>
+        <a href="EPowerPlant.html" class="list-group-item list-group-item-action bg-light">Power Plants</a>
+        <a href="About.html" class="list-group-item list-group-item-action bg-light">About</a>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+              <div class="container-fluid">
+                  <h1 class="mt-4">Consumption </h1>
+
+                  <ol class="breadcrumb mb-4">
+                      <li class="breadcrumb-item active"> </li>
+                      Please Selct from the Following Chart Filters to Manipulate Data
+                  </ol>
+                  <div class="row">
+                    <div class="col-xl-6">
+                      <div class="card mb-4">
+                        <div class="card-header">
+                        Consumption by Continent Snapshot
+                        </div>
+                          <div class="card-body">
+                            <div class="table-responsive">
+                            <!--Put Bar Charts Here-->
+                                  <!--Div that will hold the dashboard-->
+                                  <div id="bar_chart_dashboard_div">
+                                  <!--Divs that will hold each control and chart-->
+                                  <div id="bar_chart_div"></div>
+                                </div>
+                              <div class="card-footer">
+                              <div id="bar_chart_category_filter_div"></div><div id="bar_chart_year_filter_div"></div>
+                            </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    <div class="col-xl-6">
+                      <div class="card mb-4">
+                        <div class="card-header">
+                          Consumption by Continent Over Time
+                        </div>
+                        <div class="card-body">
+                          <div class="table-responsive">
+                          <!--Put Bar Charts Here-->
+                                <!--Div that will hold the dashboard-->
+                                <div id="line_chart_dashboard_div">
+                                <!--Divs that will hold each control and chart-->
+                                <div id="line_chart_div"></div>
+                              </div>
+                            <div class="card-footer">
+                              <div id="line_chart_filter_div"></div><div id='line_chart_range_filter_div'></div>
+                          </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+                      <div class="row">
+                        <div class="col-xl-6">
+                          <div class="card mb-4">
+                            <div class="card-header">
+                            Population Snapshot
+                            </div>
+                              <div class="card-body">
+                                <div class="table-responsive">
+                                <!--Put Bar Charts Here-->
+                                      <!--Div that will hold the dashboard-->
+                                      <div id="bar_chart_pop_dashboard_div">
+                                      <!--Divs that will hold each control and chart-->
+                                      <div id="bar_chart_pop_div"></div>
+                                    </div>
+                                  <div class="card-footer">
+                                  <div id="bar_chart_pop_country_filter_div"></div><div id="bar_chart_pop_year_filter_div"></div>
+                                </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                        <div class="col-xl-6">
+                          <div class="card mb-4">
+                            <div class="card-header">
+                              Population Over Time
+                            </div>
+                            <div class="card-body">
+                              <div class="table-responsive">
+                              <!--Put Bar Charts Here-->
+                                    <!--Div that will hold the dashboard-->
+                                    <div id="line_chart_pop_dashboard_div">
+                                    <!--Divs that will hold each control and chart-->
+                                    <div id="line_chart_pop_div"></div>
+                                  </div>
+                                <div class="card-footer">
+                                <div id="line_chart_pop_filter_div"></div>
+                              </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+
+
+
+                  <div class="col-xl-12">
+                    <div class="card mb-6">
+                      <div class="card-header">
+                        
+                    Consumption by Country Map
+                    Year
+                    <div id="time_div"></div>
+                    </div>
+                        <div class="card-body">
+                          <div class="table-responsive">
+                          <!--Put Bar Charts Here-->
+                                <!--Div that will hold the dashboard-->
+                                <div id="geo_chart_dashboard_div">
+                                <!--Divs that will hold each control and chart-->
+                                <div id="geo_chart_div"></div>
+                                <div class="card-footer">
+                                  <div id="geo_chart_category_filter_div"></div><button id='button' Animate></button>
+                                </div>
+                              </div>
+                              </div>
+                            </div>
+                          </div>
+              <div class="col-xl-12">
+                <div class="card mb-6">
+                  <div class="card-header">
+                    Consumption Data Table
+                  </div>
+                      <div class="card-body">
+                        <div class="table-responsive">
+                        <!--Put Bar Charts Here-->
+                              <!--Div that will hold the dashboard-->
+                              <div id="table_chart_dashboard_div">
+                              <!--Divs that will hold each control and chart-->
+                              <div id="table_chart_div"></div>
+                              <div class="card-footer">
+                                <div id="table_chart_filter_div"></div>
+                              </div>
+                            </div>
+                            </div>
+                          </div>
+                        </div>
+          </main>
+          <footer class="py-4 bg-light mt-auto">
+              <div class="container-fluid">
+                  <div class="d-flex align-items-center justify-content-between small">
+                      <div class="text-muted">Copyright &copy; Your Website 2020</div>
+                      <div>
+                          <a href="#">Privacy Policy</a>
+                          &middot;
+                          <a href="#">Terms &amp; Conditions</a>
+                      </div>
+                  </div>
+              </div>
+          </footer>
+        </div>
+        </div>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Menu Toggle Script -->
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
+  <script>
+    google.charts.load('current', {'packages':['corechart','controls','treemap','table']});
+    google.charts.setOnLoadCallback(drawAllSheets);
+
+        function drawAllSheets() {
+            drawSheetName('enerdata_country', 'SELECT * WHERE B = "coal_lignite_cons" OR B = "tot_energy_cons"OR B = "oil_cons" OR B = "nat_gas_cons" OR B = "elec_cons"'   , consByCountryDashboard);
+            drawSheetName('enerdata_country', 'SELECT * WHERE B = "coal_lignite_cons" OR B = "tot_energy_cons"OR B = "oil_cons" OR B = "nat_gas_cons" OR B = "elec_cons"', consByYearDashboard);
+            drawSheetName('enerdata_year', 'SELECT * WHERE (B = "coal_lignite_cons" OR B = "tot_energy_cons"OR B = "oil_cons" OR B = "nat_gas_cons" OR B = "elec_cons") AND (A != "Africa" AND A != "America" AND A != "Europe" AND A != "Asia" AND A != "G7" AND A != "BRICS" AND A != "World" AND A != "CIS" AND A != "European Union" AND A != "OCED"  AND A != "North America" AND A != "Latin America" AND A != "Middle-East")'   , consByYear2Dashboard);
+            drawSheetName('enerdata', 'SELECT A, B, D, C WHERE D = "coal_lignite_cons" OR D = "tot_energy_cons"OR D = "oil_cons" OR D = "nat_gas_cons" OR D = "elec_cons"'   , consDashboard);
+
+            
+            drawSheetName('world_population_country', 'SELECT A, IR, GS, FZ, DG, CJ, AT, AC'   , popBarDashboard);
+            drawSheetName('world_population_country', 'SELECT A, IR, GS, FZ, DG, CJ, AT, AC'   , popLineDashboard);
+        } //drawAllSheets
+
+        function drawSheetName(sheetName, query, responseHandler) {
+            var queryString = encodeURIComponent(query);
+            var query = new google.visualization.Query(
+                "https://docs.google.com/spreadsheets/d/14QfgtN9TiTQrfpIkV0lybuaMmz20GhtiFU0PF8fMgHM/gviz/tq?sheet=" 
+                    + sheetName + "&headers=1&tq=" + queryString); //Query
+            query.send(responseHandler);
+        } //drawSheetName
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+        google.charts.setOnLoadCallback(consByYear2Dashboard);
+
+        function consByYear2Dashboard(response) {
+            var data = response.getDataTable();
+
+            // Create a dashboard.
+            var dashboard = new google.visualization.Dashboard(
+            document.getElementById('geo_chart_dashboard_div'));
+
+            var initState = { selectedValues: ['tot_energy_cons'] };
+            // replace the 2 below with the index required
+            initState.selectedValues.push(data.getColumnLabel(2));
+
+            var geocategoryfilter = new google.visualization.ControlWrapper({
+                'controlType': 'CategoryFilter',
+                'containerId': 'geo_chart_category_filter_div',
+                'state': initState,
+                'options': {
+                'filterColumnLabel': 'Category',
+                'ui': {
+                    'allowMultiple': false
+                  }
+                }    
+            });
+            
+             // Create a pie chart, passing some options
+            var geoChart = new google.visualization.ChartWrapper({
+                'chartType': 'GeoChart',
+                'containerId': 'geo_chart_div',
+                'options': {
+                'colorAxis': {colors: ['#33cc33','#ff0000']},
+                'title': "1990",
+                'width': 1800,
+                'height': 600,
+                },
+                'view': {'columns': [0, 2]}
+            });
+
+            var time = document.getElementById("time_div");
+            time.innerHTML =  "<span> Year: ".concat(data.getColumnLabel(2).concat("</span>"));
+
+            var colIndex = 3;
+            function animate(){
+              geoChart.setView({columns: [0,colIndex]});
+              geoChart.draw();
+              time.innerHTML = "<span> Year: ".concat(data.getColumnLabel(colIndex).concat("</span>"));
+              colIndex++
+              if(colIndex > data.getNumberOfColumns()-2){
+                colIndex = 3;
+                geoChart.setView({columns: [0,colIndex]});
+                dashboard.draw(data)
+              }
+            }
+
+            function animate_wrapper(done=false){
+              var intervalHandler = setInterval(animate, 500);
+              google.visualization.events.addListener(geoChart, 'select', function(){
+                clearInterval(intervalHandler);
+                button.innerHTML = "Animate";
+                button.onclick = animate_wrapper;
+              });
+            button.innerHTML = "Stop";
+            button.onclick = function(){
+              clearInterval(intervalHandler);
+              button.innerHTML = "Animate";
+              button.onclick = animate_wrapper;
+            };
+          }
+
+          var button = document.getElementById("button");
+          button.onclick = animate_wrapper;
+
+          dashboard.bind(geocategoryfilter, [geoChart]);
+
+          dashboard.draw(data);
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        google.charts.setOnLoadCallback(consByCountryDashboard);
+
+        function consByCountryDashboard(response) {
+            var data = response.getDataTable();
+
+             // Create a dashboard.
+            var dashboard = new google.visualization.Dashboard(
+            document.getElementById('bar_chart_dashboard_div'));
+
+            var initState = { selectedValues: ['2018'] };
+            // replace the 2 below with the index required
+            initState.selectedValues.push(data.getColumnLabel(2));
+
+            var baryearfilter = new google.visualization.ControlWrapper({
+                'controlType': 'CategoryFilter',
+                'containerId': 'bar_chart_year_filter_div',
+                'state': initState,
+                'options': {
+                'filterColumnLabel': 'Year',
+                'ui': {
+                    'allowMultiple': false
+                  }
+                }
+            });
+
+            var initState = { selectedValues: ['tot_energy_cons'] };
+            // replace the 2 below with the index required
+            initState.selectedValues.push(data.getColumnLabel(2));
+
+            var barcategoryfilter = new google.visualization.ControlWrapper({
+                'controlType': 'CategoryFilter',
+                'containerId': 'bar_chart_category_filter_div',
+                'state': initState,
+                'options': {
+                'filterColumnLabel': 'Category',
+                'ui': {
+                    'allowMultiple': false
+                  }
+                }    
+            });
+            
+             // Create a pie chart, passing some options
+            var barChart = new google.visualization.ChartWrapper({
+                'chartType': 'BarChart',
+                'containerId': 'bar_chart_div',
+                'options': {
+                'width': 700,
+                'height': 400,
+                'vAxis': {title: 'Year'},
+                'hAxis': {title: 'Million Tons of Oil Equivelent'}
+                },
+                'view': {'columns': [0, 2, 4, 6, 18]}
+            });
+
+            dashboard.bind(baryearfilter, barcategoryfilter);
+            dashboard.bind(barcategoryfilter, [barChart]);
+            
+            // Draw the dashboard.
+            dashboard.draw(data);
+        }
+
+
+        google.charts.setOnLoadCallback(consByYearDashboard);
+
+        function consByYearDashboard(response) {
+            var data = response.getDataTable();
+
+             // Create a dashboard.
+            var dashboard = new google.visualization.Dashboard(
+            document.getElementById('line_chart_dashboard_div'));
+
+            var initState = { selectedValues: ['tot_energy_cons'] };
+            // replace the 2 below with the index required
+            initState.selectedValues.push(data.getColumnLabel(2));
+
+
+            var linefilter = new google.visualization.ControlWrapper({
+                'controlType': 'CategoryFilter',
+                'containerId': 'line_chart_filter_div',
+                'state': initState,
+                'options': {
+                'filterColumnLabel': 'Category',
+                'ui': {
+                    'allowMultiple': false
+                  }
+                }    
+            });
+
+            var rangefilter = new google.visualization.ControlWrapper({
+            'controlType': 'NumberRangeFilter',
+            'containerId': 'line_chart_range_filter_div',
+            'state': initState,
+            'options': {
+            'filterColumnLabel': 'Year',
+            'ui': {
+                'allowMultiple': false
+              }
+            }    
+          });
+
+             // Create a pie chart, passing some options
+            var lineChart = new google.visualization.ChartWrapper({
+                'chartType': 'LineChart',
+                'containerId': 'line_chart_div',
+                'options': {
+                'width': 700,
+                'height': 400,
+                'vAxis': {title: 'Million Tons of Oil Equivelent'},
+                'hAxis': {title: 'Year'}
+                },
+                'view': {'columns': [0, 2, 4, 6, 18]}
+            });
+
+            dashboard.bind(rangefilter ,linefilter);
+            dashboard.bind([linefilter], lineChart);
+
+            // Draw the dashboard.
+            dashboard.draw(data);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        google.charts.setOnLoadCallback(popBarDashboard);
+
+        function popBarDashboard(response) {
+          var data = response.getDataTable();
+
+          // Create a dashboard.
+          var dashboard = new google.visualization.Dashboard(
+          document.getElementById('bar_chart_pop_dashboard_div'));
+
+          var initState = { selectedValues: ['2018'] };
+          // replace the 2 below with the index required
+          initState.selectedValues.push(data.getColumnLabel(2));
+
+          var baryearfilter = new google.visualization.ControlWrapper({
+            'controlType': 'CategoryFilter',
+            'containerId': 'bar_chart_pop_year_filter_div',
+            'state': initState,
+            'options': {
+            'filterColumnLabel': 'Year',
+            'ui': {
+                'allowMultiple': false
+              }
+            }
+          });
+
+          // Create a pie chart, passing some options
+          var barChart = new google.visualization.ChartWrapper({
+            'chartType': 'BarChart',
+            'containerId': 'bar_chart_pop_div',
+            'options': {
+            'width': 700,
+            'height': 400,
+            'vAxis': {title: 'Year'},
+            'hAxis': {title: 'Population'}
+            }
+          });
+
+          dashboard.bind(baryearfilter, barChart);
+
+          // Draw the dashboard.
+          dashboard.draw(data);
+          }
+
+
+          google.charts.setOnLoadCallback(popLineDashboard);
+
+          function popLineDashboard(response) {
+          var data = response.getDataTable();
+
+          // Create a dashboard.
+          var dashboard = new google.visualization.Dashboard(
+          document.getElementById('line_chart_pop_dashboard_div'));
+
+          var initState = { selectedValues: ['United States'] };
+          // replace the 2 below with the index required
+          initState.selectedValues.push(data.getColumnLabel(2));
+
+
+          var linefilter = new google.visualization.ControlWrapper({
+            'controlType': 'NumberRangeFilter',
+            'containerId': 'line_chart_pop_filter_div',
+            'state': initState,
+            'options': {
+            'filterColumnLabel': 'Year',
+            'ui': {
+                'allowMultiple': false
+              }
+            }    
+          });
+
+          // Create a pie chart, passing some options
+          var lineChart = new google.visualization.ChartWrapper({
+            'chartType': 'LineChart',
+            'containerId': 'line_chart_pop_div',
+            'options': {
+            'width': 700,
+            'height': 400,
+            'vAxis': {title: 'Population'},
+            'hAxis': {title: 'Year'}
+            }
+          });
+
+          dashboard.bind([linefilter], lineChart);
+
+          // Draw the dashboard.
+          dashboard.draw(data);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        google.charts.setOnLoadCallback(consDashboard);
+
+        function consDashboard(response) {
+            var data = response.getDataTable();
+
+             // Create a dashboard.
+            var dashboard = new google.visualization.Dashboard(
+            document.getElementById('table_chart_dashboard_div'));
+
+            var initState = { selectedValues: ['tot_energy_cons'] };
+            // replace the 2 below with the index required
+            initState.selectedValues.push(data.getColumnLabel(2));
+
+
+            var tablefilter = new google.visualization.ControlWrapper({
+                'controlType': 'CategoryFilter',
+                'containerId': 'table_chart_filter_div',
+                'state': initState,
+                'options': {
+                'filterColumnLabel': 'Category',
+                'ui': {
+                    'allowMultiple': false
+                  }
+                }    
+            });
+
+             // Create a pie chart, passing some options
+            var tableChart = new google.visualization.ChartWrapper({
+                'chartType': 'Table',
+                'containerId': 'table_chart_div',
+                'options': {
+                'width': 1800,
+                'height': 400,
+                }
+            });
+
+            dashboard.bind([tablefilter], tableChart);
+
+            // Draw the dashboard.
+            dashboard.draw(data);
+        }
+
+
+
+
+
+
+
+    </script>
+  </script>
+</body>
+</html>
